@@ -1,0 +1,22 @@
+# Python cache
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# Atoti local storage / metadata
+atoti_storage/
+*.db
+*.trace.db
+
+# Logs
+logs/
+*.log
+transform_log.txt
+etl/transform_log.txt
+
+# OS metadata
+.DS_Store
+Thumbs.db
