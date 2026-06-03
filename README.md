@@ -2,14 +2,14 @@
 
 Proyek ini bertujuan untuk membangun arsitektur Data Warehouse (DWH) secara *end-to-end* untuk menganalisis data proyek investasi global dari **International Finance Corporation (IFC)**, anggota World Bank Group, periode tahun 1994 hingga 2026.
 
-## 👥 Kelompok Proyek
-* **Anggota 1** - Data Engineer (ETL Pipeline Extract & Transform)
-* **Anggota 2** - Database Architect (ETL Pipeline Load, Skema Bintang, Partisi, Indexing, & Benchmark)
-* **Anggota 3** - OLAP Analyst (Atoti OLAP Cube, Custom Measures, & Visualisasi)
+## Kelompok Proyek
+* **Tazkia Caecaria Marchanda**
+* **Alya Ummi Faricha**
+* **Muhammad Habib Nur Aiman**
 
 ---
 
-## 🛠️ Teknologi & Fitur Utama
+## Teknologi & Fitur Utama
 1. **Database Cloud:** PostgreSQL 15 di-hosting pada layanan cloud **Supabase**.
 2. **Desain Skema:** Model *Star Schema* dengan 1 tabel fakta sentral (`fact_investment`) dan 7 tabel dimensi (`dim_project`, `dim_company`, `dim_location`, `dim_industry`, `dim_product_line`, `dim_env_category`, dan `dim_date`).
 3. **Optimasi Database:** 
@@ -21,7 +21,7 @@ Proyek ini bertujuan untuk membangun arsitektur Data Warehouse (DWH) secara *end
 
 ---
 
-## 📂 Struktur Repositori
+## Struktur Repositori
 * `database/` : File DDL untuk skema, indeks, partisi, extensions, dan kueri analitis.
 * `etl/` : Modul asinkron Python untuk ekstraksi, transformasi, pemuatan data, dan berkas CSV dataset.
 * `atoti/` : File Python dan Jupyter Notebook untuk penyusunan DataMart OLAP.
@@ -29,7 +29,7 @@ Proyek ini bertujuan untuk membangun arsitektur Data Warehouse (DWH) secara *end
 
 ---
 
-## 🚀 Cara Menjalankan
+## Cara Menjalankan
 
 ### 1. Inisialisasi Database
 Jalankan file SQL di folder `database/` ke server PostgreSQL Anda:
