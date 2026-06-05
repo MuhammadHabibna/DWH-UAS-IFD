@@ -23,7 +23,7 @@ logging.basicConfig(
 )
 logger = logging.getLogger("atoti_datamart")
 
-DB_URI = "postgresql://postgres.bbbszbykqcxrxnfszvmc:DWH-UAS-IFC@aws-1-ap-southeast-1.pooler.supabase.com:6543/postgres?sslmode=require"
+DB_URI = "postgresql://postgres.bbbszbykqcxrxnfszvmc:DWH-UAS-IFC@aws-1-ap-southeast-1.pooler.supabase.com:5432/postgres"
 
 
 # ─────────────────────────────────────────────
@@ -223,7 +223,12 @@ def run_insight_queries(cube: tt.Cube):
 async def main():
     dfs = await fetch_dwh_data()
 
-    with tt.Session.start() as session:
+    from pathlib import Path
+    config = tt.SessionConfig(
+        port=9090,
+        user_content_storage=Path(__file__).parent / "atoti_storage"
+    )
+    with tt.Session.start(config) as session:
         cube = setup_atoti_cube(session, dfs)
         run_insight_queries(cube)
 

@@ -190,6 +190,11 @@ def _setup_logging(verbose: bool = False) -> None:
 
 
 def main():
+    if hasattr(sys.stdout, "reconfigure"):
+        sys.stdout.reconfigure(encoding="utf-8", errors="replace")
+    if hasattr(sys.stderr, "reconfigure"):
+        sys.stderr.reconfigure(encoding="utf-8", errors="replace")
+
     parser = argparse.ArgumentParser(
         description="ETL Pipeline — IFC Investment Data Warehouse (Anggota 1)"
     )

@@ -15,12 +15,12 @@ Laporan ini membandingkan 3 skenario arsitektur:
 
 | Skenario | Waktu DB Internal (ms) | Waktu Total + Jaringan (ms) | Peningkatan Kecepatan (DB Time) |
 | :--- | :---: | :---: | :---: |
-| **Flat Table** | 13.91 ms | 109.55 ms | (Baseline) |
-| **Star Schema (Optimized)** | 16.48 ms | 115.21 ms | **-18.5% Lebih Cepat** |
-| **Materialized View** | 2.21 ms | 112.97 ms | **84.1% Lebih Cepat** |
+| **Flat Table** | 13.92 ms | 54.25 ms | (Baseline) |
+| **Star Schema (Optimized)** | 26.42 ms | 60.64 ms | **-89.7% Lebih Cepat** |
+| **Materialized View** | 2.21 ms | 41.27 ms | **84.1% Lebih Cepat** |
 
 > [!TIP]
-> Menggunakan **Materialized View** memangkas waktu proses di database menjadi **2.21 ms** dibandingkan **13.91 ms** pada tabel flat.
+> Menggunakan **Materialized View** memangkas waktu proses di database menjadi **2.21 ms** dibandingkan **13.92 ms** pada tabel flat.
 
 ---
 
@@ -28,11 +28,11 @@ Laporan ini membandingkan 3 skenario arsitektur:
 
 | Skenario | Waktu DB Internal (ms) | Waktu Total + Jaringan (ms) | Peningkatan Kecepatan (DB Time) |
 | :--- | :---: | :---: | :---: |
-| **Flat Table** | 7.25 ms | 52.42 ms | (Baseline) |
-| **Star Schema (Optimized)** | 10.40 ms | 49.05 ms | **-43.4% Lebih Cepat** |
-| **Materialized View** | 0.73 ms | 39.59 ms | **89.9% Lebih Cepat** |
+| **Flat Table** | 7.17 ms | 36.84 ms | (Baseline) |
+| **Star Schema (Optimized)** | 17.84 ms | 56.87 ms | **-148.6% Lebih Cepat** |
+| **Materialized View** | 0.73 ms | 30.51 ms | **89.9% Lebih Cepat** |
 
 > [!TIP]
-> Menggunakan **Materialized View** memangkas waktu proses di database menjadi **0.73 ms** dibandingkan **7.25 ms** pada tabel flat.
+> Menggunakan **Materialized View** memangkas waktu proses di database menjadi **0.73 ms** dibandingkan **7.17 ms** pada tabel flat.
 
 ---

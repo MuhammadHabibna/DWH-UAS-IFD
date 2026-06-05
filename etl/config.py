@@ -6,18 +6,14 @@ Mata Kuliah: Data Warehouse | UAS SADA 2026
 import os
 from pathlib import Path
 
-# ─────────────────────────────────────────────
-# DATABASE (milik Anggota 2 — jangan diubah)
-# ─────────────────────────────────────────────
+# DATABASE
 
-DB_URI = "postgresql://postgres:DWH-UAS-IFC@db.bbbszbykqcxrxnfszvmc.supabase.co:5432/postgres"
+DB_URI = "postgresql://postgres.bbbszbykqcxrxnfszvmc:DWH-UAS-IFC@aws-1-ap-southeast-1.pooler.supabase.com:5432/postgres"
 
 # Alias agar kode Anggota 1 (extract/transform) tetap jalan
 DATABASE_URL = DB_URI
 
-# ─────────────────────────────────────────────
 # PATH
-# ─────────────────────────────────────────────
 
 # Root proyek: satu level di atas folder etl/
 PROJECT_ROOT = Path(__file__).resolve().parent.parent
@@ -39,9 +35,7 @@ LOG_DIR = PROJECT_ROOT / "logs"
 LOG_DIR.mkdir(exist_ok=True)
 LOG_FILE = LOG_DIR / "transform_log.txt"
 
-# ─────────────────────────────────────────────
-# RENTANG TAHUN (milik Anggota 2 — jangan diubah)
-# ─────────────────────────────────────────────
+# RENTANG TAHUN
 
 START_YEAR = 1994
 END_YEAR   = 2026
@@ -54,9 +48,9 @@ DECADE_BATCHES: list[tuple[int, int]] = [
     (2020, 2029),
 ]
 
-# ─────────────────────────────────────────────
+
 # NAMA KOLOM CSV → NAMA INTERNAL
-# ─────────────────────────────────────────────
+
 
 DATE_BATCH_COLUMN = "Date Disclosed"
 
@@ -110,9 +104,9 @@ NUMERIC_COLUMNS: list[str] = [
     "total_investment_usd_million",
 ]
 
-# ─────────────────────────────────────────────
+
 # LABEL & DEFAULT KATEGORI
-# ─────────────────────────────────────────────
+
 
 ENV_CATEGORY_LABELS: dict[str, str] = {
     "A":    "High Risk",

@@ -16,7 +16,7 @@ logging.basicConfig(
 )
 logger = logging.getLogger("load_flat")
 
-DB_URI = "postgresql://postgres:DWH-UAS-IFC@db.bbbszbykqcxrxnfszvmc.supabase.co:5432/postgres"
+DB_URI = "postgresql://postgres.bbbszbykqcxrxnfszvmc:DWH-UAS-IFC@aws-1-ap-southeast-1.pooler.supabase.com:5432/postgres"
 PROJECT_ROOT = Path(__file__).resolve().parent.parent
 DATASET_PATH = PROJECT_ROOT / "ifc_investment_services_projects.csv"
 
